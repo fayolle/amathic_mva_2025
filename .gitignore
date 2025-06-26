@@ -1,0 +1,6 @@
+input_hdr/
+input_llie/
+output_hdr/
+output_llie/
+*.asv
+*.m~
