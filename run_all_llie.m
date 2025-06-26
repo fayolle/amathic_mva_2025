@@ -14,10 +14,12 @@ if ~exist(outputFolder, 'dir')
     fprintf('Created output folder: %s\n', outputFolder);
 end
 
-llieFiles = dir(fullfile(inputFolder, '*.png'));
+imageFiles = [dir(fullfile(inputFolder, '*.png')); ...
+              dir(fullfile(inputFolder, '*.jpg')); ...
+              dir(fullfile(inputFolder, '*.jpeg'))];
 
 if isempty(llieFiles)
-    fprintf('No .png llie files found in "%s". Please place your llie images there.\n', inputFolder);
+    fprintf('No llie files found in "%s". Please place your llie images there.\n', inputFolder);
     return; 
 end
 
